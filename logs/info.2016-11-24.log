@@ -1,0 +1,51 @@
+2016-11-24 21:16:23,911 INFO  [restartedMain] RunServer: Starting RunServer on WXMIS121 with PID 5752 (D:\workspace\ArchetypeProject\target\classes started by td20 in D:\workspace\ArchetypeProject)
+2016-11-24 21:16:23,913 INFO  [restartedMain] RunServer: No active profile set, falling back to default profiles: default
+2016-11-24 21:16:23,951 INFO  [restartedMain] AnnotationConfigEmbeddedWebApplicationContext: Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c100e64: startup date [Thu Nov 24 21:16:23 CST 2016]; root of context hierarchy
+2016-11-24 21:16:24,390 INFO  [background-preinit] Version: HV000001: Hibernate Validator 5.2.4.Final
+2016-11-24 21:16:25,091 INFO  [restartedMain] PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$41f7068d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-24 21:16:25,540 INFO  [restartedMain] TomcatEmbeddedServletContainer: Tomcat initialized with port(s): 8082 (http)
+2016-11-24 21:16:25,555 INFO  [restartedMain] StandardService: Starting service Tomcat
+2016-11-24 21:16:25,556 INFO  [restartedMain] StandardEngine: Starting Servlet Engine: Apache Tomcat/8.0.33
+2016-11-24 21:16:25,890 INFO  [localhost-startStop-1] TldScanner: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2016-11-24 21:16:25,894 INFO  [localhost-startStop-1] [/ArchetypeProject]: Initializing Spring embedded WebApplicationContext
+2016-11-24 21:16:25,895 INFO  [localhost-startStop-1] ContextLoader: Root WebApplicationContext: initialization completed in 1944 ms
+2016-11-24 21:16:26,182 INFO  [localhost-startStop-1] ServletRegistrationBean: Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-24 21:16:26,187 INFO  [localhost-startStop-1] FilterRegistrationBean: Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-24 21:16:26,187 INFO  [localhost-startStop-1] FilterRegistrationBean: Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-24 21:16:26,188 INFO  [localhost-startStop-1] FilterRegistrationBean: Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-24 21:16:26,188 INFO  [localhost-startStop-1] FilterRegistrationBean: Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-24 21:16:26,475 INFO  [restartedMain] ThreadPoolTaskScheduler: Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2016-11-24 21:16:26,485 INFO  [restartedMain] WebSocketHandlerMapping: Mapped URL path [/console] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2016-11-24 21:16:26,694 INFO  [restartedMain] RequestMappingHandlerAdapter: Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c100e64: startup date [Thu Nov 24 21:16:23 CST 2016]; root of context hierarchy
+2016-11-24 21:16:26,745 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/]}" onto public java.lang.String com.aibibang.controller.LoginController.index(java.lang.String,org.springframework.ui.Model)
+2016-11-24 21:16:26,745 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/login]}" onto public java.lang.String com.aibibang.controller.LoginController.login(com.aibibang.model.UserInfo,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-24 21:16:26,746 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/logout]}" onto public java.lang.String com.aibibang.controller.LoginController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-24 21:16:26,750 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/soft/add],methods=[POST]}" onto public java.lang.String com.aibibang.controller.SoftController.add(com.aibibang.model.SoftInfo,org.springframework.ui.Model)
+2016-11-24 21:16:26,750 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/soft/update],methods=[POST]}" onto public java.lang.String com.aibibang.controller.SoftController.update(com.aibibang.model.SoftInfo,org.springframework.ui.Model)
+2016-11-24 21:16:26,750 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/soft/update],methods=[GET]}" onto public java.lang.String com.aibibang.controller.SoftController.update(int)
+2016-11-24 21:16:26,751 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/soft/delete],methods=[GET]}" onto public java.lang.String com.aibibang.controller.SoftController.delete(int,org.springframework.ui.Model)
+2016-11-24 21:16:26,751 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/soft || /soft/]}" onto public java.lang.String com.aibibang.controller.SoftController.list(org.springframework.ui.Model)
+2016-11-24 21:16:26,751 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/soft/deleteSoftFile],methods=[GET]}" onto public java.lang.String com.aibibang.controller.SoftController.deleteSoftFile(int,int,org.springframework.ui.Model)
+2016-11-24 21:16:26,751 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/soft/getSoftFiles],methods=[GET]}" onto public java.lang.String com.aibibang.controller.SoftController.getSoftFiles(int,org.springframework.ui.Model)
+2016-11-24 21:16:26,751 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/soft/addSoftFile],methods=[POST]}" onto public java.lang.String com.aibibang.controller.SoftController.addSoftFile(com.aibibang.model.UploadFile,org.springframework.web.multipart.MultipartFile,org.springframework.ui.Model)
+2016-11-24 21:16:26,753 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/user/add],methods=[POST]}" onto public java.lang.String com.aibibang.controller.UserController.add(com.aibibang.model.UserInfo,org.springframework.ui.Model)
+2016-11-24 21:16:26,753 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/user/update],methods=[GET]}" onto public java.lang.String com.aibibang.controller.UserController.update(int)
+2016-11-24 21:16:26,753 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/user/update],methods=[POST]}" onto public java.lang.String com.aibibang.controller.UserController.update(com.aibibang.model.UserInfo,org.springframework.ui.Model)
+2016-11-24 21:16:26,753 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/user/delete],methods=[GET]}" onto public java.lang.String com.aibibang.controller.UserController.delete(int,org.springframework.ui.Model)
+2016-11-24 21:16:26,754 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/user || /user/]}" onto public java.lang.String com.aibibang.controller.UserController.list(org.springframework.ui.Model)
+2016-11-24 21:16:26,756 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-24 21:16:26,756 INFO  [restartedMain] RequestMappingHandlerMapping: Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-24 21:16:26,770 INFO  [restartedMain] SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-24 21:16:26,770 INFO  [restartedMain] SimpleUrlHandlerMapping: Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-24 21:16:26,817 INFO  [restartedMain] SimpleUrlHandlerMapping: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-24 21:16:27,130 INFO  [restartedMain] OptionalLiveReloadServer: LiveReload server is running on port 35729
+2016-11-24 21:16:27,170 INFO  [restartedMain] AnnotationMBeanExporter: Registering beans for JMX exposure on startup
+2016-11-24 21:16:27,174 INFO  [restartedMain] DefaultLifecycleProcessor: Starting beans in phase 2147483647
+2016-11-24 21:16:27,195 INFO  [restartedMain] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8082"]
+2016-11-24 21:16:27,200 INFO  [restartedMain] Http11NioProtocol: Starting ProtocolHandler ["http-nio-8082"]
+2016-11-24 21:16:27,229 INFO  [restartedMain] NioSelectorPool: Using a shared selector for servlet write/read
+2016-11-24 21:16:27,255 INFO  [restartedMain] TomcatEmbeddedServletContainer: Tomcat started on port(s): 8082 (http)
+2016-11-24 21:16:27,258 INFO  [restartedMain] RunServer: Started RunServer in 3.566 seconds (JVM running for 4.118)
+2016-11-24 21:16:58,417 INFO  [http-nio-8082-exec-8] [/ArchetypeProject]: Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-24 21:16:58,417 INFO  [http-nio-8082-exec-8] DispatcherServlet: FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-24 21:16:58,430 INFO  [http-nio-8082-exec-8] DispatcherServlet: FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms

@@ -1,0 +1,1 @@
+java -Xms128M -Xmx1024M -jar ./lib/ArchetypeProject-0.0.1-SNAPSHOT.war
