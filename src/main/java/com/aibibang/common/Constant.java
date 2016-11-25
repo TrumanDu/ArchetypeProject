@@ -6,5 +6,5 @@ package com.aibibang.common;
 * @description:常量
 */
 public class Constant {
-	
+	public static String FILEPATH="D:\\hadoop";
 }

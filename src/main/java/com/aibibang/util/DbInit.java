@@ -18,7 +18,7 @@ public class DbInit {
 	public static void main(String[] args) {
 		try {
 			Class.forName("org.sqlite.JDBC");
-			c = DriverManager.getConnection("jdbc:sqlite:D:/workspace/ElasticDeploy/DeployResource/db/deploy.db");
+			c = DriverManager.getConnection("jdbc:sqlite:E:\\github\\ArchetypeProject\\DeployResource\\db\\deploy.db");
 			System.out.println("Opened database successfully");
 			stmt = c.createStatement();
 			
@@ -26,11 +26,13 @@ public class DbInit {
 			//删除表
 			//DbInit.deleteTable();
 			//创建表
-			DbInit.SoftSqlInit();
-			DbInit.UserSqlInit();
+			//DbInit.SoftSqlInit();
+			//DbInit.UserSqlInit();
 			//DbInit.deleteTable("soft_file");
-			DbInit.SoftFileSqlInit();
-			DbInit.LogsSqlInit();
+			//DbInit.SoftFileSqlInit();
+			//DbInit.LogsSqlInit();
+			//DbInit.DeviceInfoSqlInit();
+			DbInit.DeviceInfoSqlAdd();
 
 		} catch (Exception e) {
 			System.err.println(e.getClass().getName() + ": " + e.getMessage());
@@ -65,6 +67,22 @@ public class DbInit {
 				"filePath   CHAR(100), " +
 				"hostIPs         text)";
 		stmt.executeUpdate(sql);
+	}
+	
+	public static void DeviceInfoSqlInit() throws SQLException {
+		String sql = "CREATE TABLE device_info " +
+				"(id INTEGER PRIMARY KEY AUTOINCREMENT   NOT NULL," +
+				" name           CHAR(200)    NOT NULL," +
+				" param   text)";
+		stmt.executeUpdate(sql);
+	}
+	
+	public static void DeviceInfoSqlAdd() throws SQLException {
+		for(int i=0;i<9;i++){
+			String sql = "insert into device_info(name, param) values('设备"+i+"', '参数1:值1,参数2:值2,参数3:值3,参数4:值4,参数5:值5,参数6:值6,参数7:值7,参数8:值8')";
+			stmt.executeUpdate(sql);
+		}
+		
 	}
 	
 	public static void UserSqlInit() throws SQLException {
