@@ -90,14 +90,14 @@ public class SSHUtil {
 					result.append(buf);
 				}
 		} catch (IOException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		} catch (JSchException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		} finally {
 			/*try {
 				reader.close();
 			} catch (IOException e) {
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
 			channel.disconnect();
 			session.disconnect();*/
@@ -139,7 +139,7 @@ public class SSHUtil {
 				Thread.sleep(100);
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		} finally{
 			channelShell.disconnect();
 			session.disconnect();
@@ -172,7 +172,7 @@ public class SSHUtil {
 			logger.debug("成功上传文件至" + directory);
 			flag = true;
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		} finally {
 			chSftp.quit();
 
@@ -210,7 +210,7 @@ public class SSHUtil {
 			chSftp.get(downloadFile, directory, new FileProgressMonitor(fileSize,webSocketSession)); // 代码段1  
 			logger.debug("成功下载文件至" + directory);
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		} finally {
 			chSftp.quit();
 			if (channel != null) {
@@ -241,7 +241,7 @@ public class SSHUtil {
 			chSftp.rm(deleteFile);
 			logger.debug("成功删除文件" + deleteFile);
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}finally{
 			chSftp.quit();
 			if (channel != null) {

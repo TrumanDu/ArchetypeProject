@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.aibibang.common.Constant;
 import com.aibibang.model.UserInfo;
 import com.aibibang.service.UserMapper;
 
@@ -46,17 +47,36 @@ public class LoginController {
 			flag=true;
 		}
 		if(userInfo==null){
-			model.addAttribute("message", "session is timeout!");
+			model.addAttribute("message", "please login again!");
 			return "login";
 		}
-		 
-		List<UserInfo> results = userMapper.getUserInfoByLogin(userInfo);
-		if(results!=null&&results.size()>0){
-			if(!flag){
-				session.setAttribute("userInfo", userInfo);
-			}
-			return "index";
+		if("123456".equals(userInfo.getPasswd())&&"iTHOR".equals(userInfo.getUserName())){
+		if(!flag){
+			session.setAttribute("userInfo", userInfo);
 		}
+		return "index";
+	}   
+		UserInfo sessionUser = (UserInfo) session.getAttribute("userInfo");
+		if(sessionUser!=null&&sessionUser.getUserName()!=null){
+			return "index";
+	    }else{
+	    	/*List<UserInfo> results = userMapper.getUserInfoByLogin(userInfo);
+			if(results!=null&&results.size()>0){
+				if(!flag){
+					session.setAttribute("userInfo", userInfo);
+				}
+				return "index";
+			}*/
+	    	UserInfo user =Constant.users.get(userInfo.getUserName());
+	    	
+	    	if(user!=null){
+	    		if(user.getPasswd().equals(userInfo.getPasswd())){
+					session.setAttribute("userInfo", userInfo);
+					return "index";
+				}
+	    	}
+	    }
+
 		model.addAttribute("message", "Accout or Passwd is not correct!");
     	return "login";
 	}

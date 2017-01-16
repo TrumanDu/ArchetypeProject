@@ -29,7 +29,7 @@ public class UploadService {
 			uploadFile(uploadPath, file, file.getOriginalFilename());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return uploadPath + System.getProperty("file.separator") + file.getOriginalFilename();
 	}

@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="${pageContext.request.contextPath}/login">ElasticDeploy</a>
+                <a class="navbar-brand" href="${pageContext.request.contextPath}/login">XXX接入单元</a>
             </div>
             <!-- /.navbar-header -->
 

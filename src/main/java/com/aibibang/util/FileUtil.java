@@ -39,14 +39,14 @@ public class FileUtil {
              }
             
         } catch (IOException e) {    
-            e.printStackTrace();    
+            //e.printStackTrace();    
         } finally{
         	try {
 				is.close();
 				p.destroy();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
         	
         }

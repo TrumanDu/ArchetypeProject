@@ -18,7 +18,7 @@ public class WebSocketMessageSend {
 				session.sendMessage(new TextMessage(message + "\n"));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
 		}
 	}

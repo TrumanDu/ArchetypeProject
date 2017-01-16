@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="Cache-Control" content="max-age=77"/>
 
-    <title>ElasticDeploy</title>
+    <title>XXX接入单元</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +23,7 @@
     <!-- Custom Fonts -->
     <link href="${pageContext.request.contextPath}/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.terminal.css" type="text/css">
+    <%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.terminal.css" type="text/css"> --%>
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,5 +46,5 @@
     <!-- DataTables JavaScript -->
     <script src="${pageContext.request.contextPath}/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="${pageContext.request.contextPath}/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/bootbox.min.js"></script>  
+    <%-- <script src="${pageContext.request.contextPath}/js/bootbox.min.js"></script>  --%> 
 </html>

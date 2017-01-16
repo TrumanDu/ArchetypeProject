@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.aibibang.common.Constant;
 import com.aibibang.model.UserInfo;
 import com.aibibang.service.UserMapper;
 import com.alibaba.fastjson.JSON;
@@ -39,6 +40,7 @@ public class UserController {
 		
 		boolean result = userMapper.add(userInfo);
 		if(result){
+			Constant.users.put(userInfo.getUserName(), userInfo);
 			model.addAttribute("message", "add successed!");
 		}else{
 			model.addAttribute("message", "add fail!");
@@ -48,8 +50,10 @@ public class UserController {
 	
 	@RequestMapping(value="/delete",method=RequestMethod.GET )
 	public String delete(@RequestParam(value="id") int id,Model model){
+		UserInfo userInfo = userMapper.getUserInfoById(id);
 		boolean result = userMapper.deleteById(id);
 		if(result){
+			Constant.users.remove(userInfo.getUserName());
 			model.addAttribute("message", "delete successed!");
 		}else{
 			model.addAttribute("message", "delete fail!");
@@ -68,6 +72,7 @@ public class UserController {
 	public String update(UserInfo userInfo,Model model){
 		boolean result = userMapper.update(userInfo);
 		if(result){
+			Constant.users.put(userInfo.getUserName(), userInfo);
 			model.addAttribute("message", "update successed!");
 		}else{
 			model.addAttribute("message", "update fail!");

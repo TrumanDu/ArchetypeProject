@@ -31,7 +31,7 @@ public class  HttpUtil {
 			response = HttpClientBuilder.create().build().execute(post);
 			System.out.println(response.getStatusLine().getStatusCode());
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return response;
 	}
@@ -43,7 +43,7 @@ public class  HttpUtil {
 			response = HttpClientBuilder.create().build().execute(get);
 			System.out.println(response.getStatusLine().getStatusCode());
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return response;
 	}
@@ -63,7 +63,7 @@ public class  HttpUtil {
 			} else {
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return null;
 	}

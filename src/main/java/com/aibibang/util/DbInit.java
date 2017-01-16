@@ -43,7 +43,7 @@ public class DbInit {
 				c.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
 		}
 		System.out.println("Table created successfully");
@@ -78,8 +78,10 @@ public class DbInit {
 	}
 	
 	public static void DeviceInfoSqlAdd() throws SQLException {
+		String delsql = "delete from device_info";
+		stmt.executeUpdate(delsql);
 		for(int i=0;i<9;i++){
-			String sql = "insert into device_info(name, param) values('设备"+i+"', '参数1:值1,参数2:值2,参数3:值3,参数4:值4,参数5:值5,参数6:值6,参数7:值7,参数8:值8')";
+			String sql = "insert into device_info(name, param) values('设备111"+i+"', '参数1:值1,参数2:值2,参数3:值3,参数4:值4,参数5:值5,参数6:值6,参数7:值7,参数8:值8')";
 			stmt.executeUpdate(sql);
 		}
 		
